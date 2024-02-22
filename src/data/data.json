@@ -2,7 +2,7 @@
   {
     "id": 1,
     "company": "FaceIt",
-    "logo": "./images/faceit.svg",
+    "logo": "./faceit.svg",
     "new": false,
     "featured": false,
     "position": "Junior Backend Developer",
@@ -21,7 +21,7 @@
   {
     "id": 2,
     "company": "Loop Studios",
-    "logo": "./images/loop-studios.svg",
+    "logo": "./loop-studios.svg",
     "new": false,
     "featured": false,
     "position": "Software Engineer",
@@ -41,7 +41,7 @@
   {
     "id": 3,
     "company": "Manage",
-    "logo": "./images/manage.svg",
+    "logo": "./manage.svg",
     "new": true,
     "featured": true,
     "position": "Fullstack Developer",
@@ -60,7 +60,7 @@
   {
     "id": 4,
     "company": "Eyecam Co.",
-    "logo": "./images/eyecam-co.svg",
+    "logo": "./eyecam-co.svg",
     "new": false,
     "featured": false,
     "position": "Full Stack Engineer",
@@ -80,7 +80,7 @@
   {
     "id": 5,
     "company": "Photosnap",
-    "logo": "./images/photosnap.svg",
+    "logo": "./photosnap.svg",
     "new": true,
     "featured": true,
     "position": "Senior Frontend Developer",
@@ -99,7 +99,7 @@
   {
     "id": 6,
     "company": "FaceIt",
-    "logo": "./images/faceit.svg",
+    "logo": "./faceit.svg",
     "new": false,
     "featured": false,
     "position": "Junior Backend Developer",
@@ -118,7 +118,7 @@
   {
     "id": 7,
     "company": "Loop Studios",
-    "logo": "./images/loop-studios.svg",
+    "logo": "./loop-studios.svg",
     "new": false,
     "featured": false,
     "position": "Software Engineer",
@@ -138,7 +138,7 @@
   {
     "id": 8,
     "company": "MyHome",
-    "logo": "./images/myhome.svg",
+    "logo": "./myhome.svg",
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -156,7 +156,7 @@
   {
     "id": 9,
     "company": "Account",
-    "logo": "./images/account.svg",
+    "logo": "./account.svg",
     "new": true,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -176,7 +176,7 @@
   {
     "id": 10,
     "company": "Eyecam Co.",
-    "logo": "./images/eyecam-co.svg",
+    "logo": "./eyecam-co.svg",
     "new": false,
     "featured": false,
     "position": "Full Stack Engineer",
@@ -196,7 +196,7 @@
   {
     "id": 11,
     "company": "The Air Filter Company",
-    "logo": "./images/the-air-filter-company.svg",
+    "logo": "./the-air-filter-company.svg",
     "new": false,
     "featured": false,
     "position": "Front-end Dev",
@@ -216,7 +216,7 @@
   {
     "id": 12,
     "company": "Manage",
-    "logo": "./images/manage.svg",
+    "logo": "./manage.svg",
     "new": true,
     "featured": true,
     "position": "Fullstack Developer",
@@ -235,7 +235,7 @@
   {
     "id": 13,
     "company": "FaceIt",
-    "logo": "./images/faceit.svg",
+    "logo": "./faceit.svg",
     "new": false,
     "featured": false,
     "position": "Junior Backend Developer",
@@ -254,7 +254,7 @@
   {
     "id": 14,
     "company": "MyHome",
-    "logo": "./images/myhome.svg",
+    "logo": "./myhome.svg",
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -272,7 +272,7 @@
   {
     "id": 15,
     "company": "Loop Studios",
-    "logo": "./images/loop-studios.svg",
+    "logo": "./loop-studios.svg",
     "new": false,
     "featured": false,
     "position": "Software Engineer",
@@ -292,7 +292,7 @@
   {
     "id": 16,
     "company": "Photosnap",
-    "logo": "./images/photosnap.svg",
+    "logo": "./photosnap.svg",
     "new": true,
     "featured": true,
     "position": "Senior Frontend Developer",
@@ -311,7 +311,7 @@
   {
     "id": 17,
     "company": "Insure",
-    "logo": "./images/insure.svg",
+    "logo": "./insure.svg",
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -331,7 +331,7 @@
   {
     "id": 18,
     "company": "Insure",
-    "logo": "./images/insure.svg",
+    "logo": "./insure.svg",
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -351,7 +351,7 @@
   {
     "id": 19,
     "company": "Photosnap",
-    "logo": "./images/photosnap.svg",
+    "logo": "./photosnap.svg",
     "new": true,
     "featured": true,
     "position": "Senior Frontend Developer",
@@ -370,7 +370,7 @@
   {
     "id": 20,
     "company": "The Air Filter Company",
-    "logo": "./images/the-air-filter-company.svg",
+    "logo": "./the-air-filter-company.svg",
     "new": false,
     "featured": false,
     "position": "Front-end Dev",
@@ -390,7 +390,7 @@
   {
     "id": 21,
     "company": "Shortly",
-    "logo": "./images/shortly.svg",
+    "logo": "./shortly.svg",
     "new": false,
     "featured": false,
     "position": "Junior Developer",
@@ -410,7 +410,7 @@
   {
     "id": 22,
     "company": "The Air Filter Company",
-    "logo": "./images/the-air-filter-company.svg",
+    "logo": "./the-air-filter-company.svg",
     "new": false,
     "featured": false,
     "position": "Front-end Dev",
@@ -430,7 +430,7 @@
   {
     "id": 23,
     "company": "Eyecam Co.",
-    "logo": "./images/eyecam-co.svg",
+    "logo": "./eyecam-co.svg",
     "new": false,
     "featured": false,
     "position": "Full Stack Engineer",
@@ -450,7 +450,7 @@
   {
     "id": 24,
     "company": "Insure",
-    "logo": "./images/insure.svg",
+    "logo": "./insure.svg",
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -470,7 +470,7 @@
   {
     "id": 25,
     "company": "Manage",
-    "logo": "./images/manage.svg",
+    "logo": "./manage.svg",
     "new": true,
     "featured": true,
     "position": "Fullstack Developer",
@@ -489,7 +489,7 @@
   {
     "id": 26,
     "company": "MyHome",
-    "logo": "./images/myhome.svg",
+    "logo": "./myhome.svg",
     "new": false,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -507,7 +507,7 @@
   {
     "id": 27,
     "company": "Account",
-    "logo": "./images/account.svg",
+    "logo": "./account.svg",
     "new": true,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -527,7 +527,7 @@
   {
     "id": 28,
     "company": "Account",
-    "logo": "./images/account.svg",
+    "logo": "./account.svg",
     "new": true,
     "featured": false,
     "position": "Junior Frontend Developer",
@@ -547,7 +547,7 @@
   {
     "id": 29,
     "company": "Shortly",
-    "logo": "./images/shortly.svg",
+    "logo": "./shortly.svg",
     "new": false,
     "featured": false,
     "position": "Junior Developer",
@@ -567,7 +567,7 @@
   {
     "id": 30,
     "company": "Shortly",
-    "logo": "./images/shortly.svg",
+    "logo": "./shortly.svg",
     "new": false,
     "featured": false,
     "position": "Junior Developer",
