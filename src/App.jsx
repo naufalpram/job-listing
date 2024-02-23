@@ -52,7 +52,7 @@ const App = () => {
 
   const updateJobs = () => {
     return data.filter(job => {
-      return (filter.role === null || job.role.toLowerCase().includes(filter.role.toLowerCase())) &&
+      return (filter.role === null || job.role.toLowerCase() === filter.role.toLowerCase()) &&
       (filter.level === null || job.level.toLowerCase() === filter.level.toLowerCase()) &&
       (filter.languages.length === 0 || filter.languages.every(lang => job.languages.includes(lang)))
     })
@@ -78,7 +78,7 @@ const App = () => {
     const endIndex = currentPage * jobsPerPage;
     const shownJobs = jobs.slice(startIndex, endIndex);
     
-      return shownJobs.map(job =>
+    return shownJobs.map(job =>
       <JobCard key={job.id} jobDetail={job} handleSelectFilter={handleSelectFilter} />
     );
   }
