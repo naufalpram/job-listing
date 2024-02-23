@@ -6,10 +6,7 @@ const FilterListContainer = ({ filter, handleClear, handleUnselect }) => {
   const [fixedFilter, setFixedFilter] = useState(filter);
 
   useEffect(() => {
-    setShowFilter(
-        filter.role !== null || filter.level !== null ||
-        filter.languages.length !== 0 || filter.tools.length !== 0
-    );
+    setShowFilter(filter.role !== null || filter.level !== null || filter.languages.length !== 0);
     setFixedFilter(filter);
   }, [filter]);
 

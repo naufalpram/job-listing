@@ -5,18 +5,16 @@ const JobCard = ({ jobDetail, handleSelectFilter }) => {
   const [filterQuery, setFilterQuery] = useState({
     role: jobDetail.role,
     level: jobDetail.level,
-    languages: jobDetail.languages,
-    tools: jobDetail.tools
+    languages: jobDetail.languages
   })
 
   useEffect(() => {
     setFilterQuery({
         role: jobDetail.role,
         level: jobDetail.level,
-        languages: jobDetail.languages,
-        tools: jobDetail.tools
+        languages: jobDetail.languages
     })
-  }, [jobDetail.role, jobDetail.level, jobDetail.languages, jobDetail.tools])
+  }, [jobDetail.role, jobDetail.level, jobDetail.languages])
   
   return (
     <li className={`relative bg-white p-7 rounded-md flex items-center gap-6 shadow-lg mb-12 lg:mb-6`}>

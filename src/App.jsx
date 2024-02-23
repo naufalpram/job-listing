@@ -5,22 +5,23 @@ import JobCard from './components/JobCard';
 import data from './data/data.json';
 import FilterListContainer from './components/FilterListContainer';
 
+const jobsPerPage = 5;
 
 const App = () => {
-  const [filteredJobs, setFilteredJobs] = useState([]);
+  const [filteredJobs, setFilteredJobs] = useState([...data]);
   const [filter, setFilter] = useState({
     role: null,
     level: null,
-    languages: [],
-    tools: []
+    languages: []
   });
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(Math.ceil(data.length / jobsPerPage))
 
   const handleClear = () => {
     setFilter({
       role: null,
       level: null,
-      languages: [],
-      tools: []
+      languages: []
     })
     setFilteredJobs([]);
   };
@@ -36,7 +37,7 @@ const App = () => {
     if (key === 'role' || key === 'level')
       setFilter(current => ({...current, [key]: value}));
     else{
-      if (!filter.languages.includes(value)){
+      if (!filter[key].includes(value)){
         const updatedArray = [...filter[key]];
         updatedArray.push(value)
         setFilter(current => ({...current, [key]: updatedArray}));
@@ -45,25 +46,39 @@ const App = () => {
     
   }
 
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  }
+
   const updateJobs = () => {
     return data.filter(job => {
       return (filter.role === null || job.role.toLowerCase().includes(filter.role.toLowerCase())) &&
       (filter.level === null || job.level.toLowerCase() === filter.level.toLowerCase()) &&
-      (filter.languages.length === 0 || filter.languages.every(lang => job.languages.includes(lang))) &&
-      (filter.tools.length === 0 || filter.tools.every(tool => job.tools.includes(tool)))
+      (filter.languages.length === 0 || filter.languages.every(lang => job.languages.includes(lang)))
     })
   }
 
   useEffect(() => {
-    if (filter.role || filter.level || filter.languages.length > 0 || filter.tools.length > 0)
-      setFilteredJobs(updateJobs());
+    setCurrentPage(1);
+    if (filter.role || filter.level || filter.languages.length > 0){
+      const updatedJobs = updateJobs();
+      setTotalPages(Math.ceil(updatedJobs.length / jobsPerPage));
+      setFilteredJobs(updatedJobs);
+    }
+    else {
+      setTotalPages(Math.ceil(data.length / jobsPerPage));
+      setFilteredJobs([...data]);
+    }
   }, [filter])
   
 
   // JobList Component
-  const JobList = () => {
-    const jobs = filteredJobs.length === 0 ? data : filteredJobs;
-    return jobs.map(job =>
+  const JobList = ({ jobs }) => {
+    const startIndex = (currentPage - 1) * jobsPerPage;
+    const endIndex = currentPage * jobsPerPage;
+    const shownJobs = jobs.slice(startIndex, endIndex);
+    
+      return shownJobs.map(job =>
       <JobCard key={job.id} jobDetail={job} handleSelectFilter={handleSelectFilter} />
     );
   }
@@ -76,19 +91,23 @@ const App = () => {
           <FilterListContainer filter={filter} handleClear={handleClear} handleUnselect={handleUnselectFilter} />
           <div>
             <ul>
-              <JobList />
+              <JobList jobs={filteredJobs} />
             </ul>
           </div>
           <nav className="mt-4">
             <ul className="flex justify-center">
-              <li>
+              {Array.from({ length: totalPages }, (_, i) => (
+                <li key={i}>
                 <button
                   className={`mx-1 px-6 py-4 rounded shadow 
-                      text-blue-500 bg-white`}
+                    ${currentPage === i + 1 ? 'bg-cyan-dark text-white' : 'bg-white text-blue-500'}`
+                  }
+                  onClick={() => handlePageChange(i + 1)}
                 >
-                  1
+                  {i + 1}
                 </button>
               </li>
+              ))}
             </ul>
           </nav>
         </div>

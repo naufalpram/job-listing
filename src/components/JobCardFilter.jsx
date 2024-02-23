@@ -33,15 +33,6 @@ const JobCardFilter = ({ filterQuery, handleSelect }) => {
                     </button>
                 </li>
             ))}
-            {filterQuery?.tools?.map((tool, idx) => (
-                <li key={idx}>
-                    <button onClick={() => handleSelect('tools', tool)}>
-                        <div className="bg-cyan-light-2 px-2 py-1.5 text-sm text-cyan-dark font-bold rounded-l-md  hover:bg-cyan-dark hover:text-white rounded-r-md ">
-                            {tool}
-                        </div>
-                    </button>
-                </li>
-            ))}
         </ul>
     </div>
   )
