@@ -21,7 +21,7 @@ const JobDetail = () => {
                 </button>
             </Link>
           <div className="flex items-center mb-4 mt-8">
-            <img src={jobData.logo} className="w-12 h-12 mr-4" alt="Company Logo" />
+            <img src={`../../public/${jobData.logo}`} className="w-12 h-12 mr-4" alt="Company Logo" />
             <div>
               <h1 className="text-xl font-semibold text-gray-800">{jobData.position}</h1>
               <p className="text-[#787878]">{jobData.company}</p>
