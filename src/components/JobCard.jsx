@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import JobCardFilter from './JobCardFilter';
+import { Link } from 'react-router-dom';
 
 const JobCard = ({ jobDetail, handleSelectFilter }) => {
   const [filterQuery, setFilterQuery] = useState({
@@ -40,12 +41,11 @@ const JobCard = ({ jobDetail, handleSelectFilter }) => {
                     </span>
                 }
             </div>
-            <a
-                href="#"
-                className="block my-1 text-base font-bold hover:text-cyan-dark"
-            >
-                {jobDetail.position}
-            </a>
+            <Link to={`/jobs/${jobDetail.id}`}>
+              <p className="block my-1 text-base font-bold hover:text-cyan-dark">
+                  {jobDetail.position}
+              </p>
+            </Link>
             <ul className="flex text-cyan-dark-grayish gap-4 text-sm font-medium">
                 <li>{jobDetail.postedAt}</li>
                 <li className="before:content-['•'] before:mr-3 after:content-['•'] after:ml-3">

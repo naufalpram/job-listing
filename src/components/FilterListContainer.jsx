@@ -11,16 +11,16 @@ const FilterListContainer = ({ filter, handleClear, handleUnselect }) => {
   }, [filter]);
 
   return (
-    showFilter && (
     <div className="w-full max-w-5xl min-h-[4rem] mb-10">
+    {showFilter && (
       <div className="bg-white rounded-md px-7 py-4 w-full shadow-lg flex justify-between">
         <FilterList filter={fixedFilter} handleUnselect={handleUnselect} />
         <button className="text-sm text-cyan-dark font-bold underline" onClick={handleClear}>
             Clear
         </button>
       </div>
+    )}
     </div>
-    )
   )
 }
 
