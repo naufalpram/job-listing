@@ -3,10 +3,13 @@ import JobCard from '../components/JobCard';
 
 import data from '../data/data.json';
 import FilterListContainer from '../components/FilterListContainer';
+import { useAuth } from '../auth';
+import { Navigate } from 'react-router-dom';
 
 const jobsPerPage = 5;
 
 const JobListing = () => {
+  const { isLoggedIn } = useAuth();
   const [filteredJobs, setFilteredJobs] = useState([...data]);
   const [filter, setFilter] = useState({
     role: null,
@@ -84,6 +87,7 @@ const JobListing = () => {
 
   return (
     <>
+    {!isLoggedIn ? <Navigate to={'/login'} replace /> : (
       <main className="bg-cyan-light min-h-[80vh] pb-8 px-6">
         <div className="max-w-5xl m-auto relative -top-8 ">
           <FilterListContainer filter={filter} handleClear={handleClear} handleUnselect={handleUnselectFilter} />
@@ -110,6 +114,7 @@ const JobListing = () => {
           </nav>
         </div>
       </main>
+    )}
     </>
   );
 };

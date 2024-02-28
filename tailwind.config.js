@@ -19,6 +19,8 @@ export default {
   fontFamily: {
     sans: ["League Spartan", "sans-serif"],
   },
-  plugins: [],
+  plugins: [
+    // require('@tailwindcss/forms'),
+  ],
 };
 

@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
 import data from '../data/data.json'
+import { useAuth } from '../auth';
 
 const JobDetail = () => {
+  const { isLoggedIn } = useAuth();
   const params = useParams();
   const navigate = useNavigate();
   const jobData = data.find(job => job.id == params.id);
@@ -13,6 +15,8 @@ const JobDetail = () => {
   }
   
   return (
+    <>
+    {!isLoggedIn ? <Navigate to='/login' replace /> : (
     <div className="min-h-[80vh] relative">
         <div className="min-h-[80vh] bg-white rounded-lg shadow-lg p-10">
             <Link to='/jobs'>
@@ -82,6 +86,8 @@ const JobDetail = () => {
           </div>
         </div>
       </div>
+    )}
+    </>
   )
 }
 

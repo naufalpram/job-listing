@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../auth';
 
 const LandingPage = () => {
+  const { isLoggedIn } = useAuth();
+
   return (
     <div className="min-h-screen bg-cyan-light relative overflow-hidden">
         <div className="absolute inset-0 bg-[#0f1e32] z-0"></div>
@@ -15,7 +18,7 @@ const LandingPage = () => {
             out, discover exciting roles in tech hubs across the globe
           </p>
           <div className="flex justify-center">
-            <Link to="/jobs">
+            <Link to={isLoggedIn ? '/jobs' : '/login'}>
                 <button className="bg-cyan-dark hover:bg-[#eac77d] text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
                 Start Your Journey Now!
                 </button>

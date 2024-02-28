@@ -3,6 +3,9 @@ import {RouterProvider, createBrowserRouter} from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import JobDetail from './pages/JobDetail';
 import Header from './components/Header';
+import Login from './pages/Login';
+import { AuthProvider } from './auth';
+import ProtectedRoute from './components/auth_route/ProtectedRoute';
 
 const router = createBrowserRouter([
   {
@@ -10,23 +13,42 @@ const router = createBrowserRouter([
     element: <LandingPage />
   },
   {
+    path: '/login',
+    element: <Header />,
+    children: [
+      {index: true, element: <Login />}
+    ]
+  },
+  {
     path: '/jobs',
     element: <Header />,
     children: [
       {
         index: true,
-        element: <JobListing />
+        element: (
+          <ProtectedRoute>
+            <JobListing />
+          </ProtectedRoute>
+        )
       },
       {
         path: ':id',
-        element: <JobDetail />
+        element: (
+          <ProtectedRoute>
+            <JobDetail />
+          </ProtectedRoute>
+        )
       }
     ]
   }
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />;
+    </AuthProvider>
+  )
 };
 
 export default App;
