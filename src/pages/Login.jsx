@@ -7,7 +7,6 @@ export default function Login() {
     const [isLoading, setIsLoading] = useState(false);
 
     const handleLogin = (e) => {
-        setIsLoading(true);
         e.preventDefault();
         const formData = new FormData(e.target);
         const submitData = {};
@@ -15,7 +14,6 @@ export default function Login() {
             submitData[name] = value;
         }
         login(submitData);
-        setIsLoading(false);
     }
 
     return (
@@ -68,7 +66,7 @@ export default function Login() {
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-cyan-dark px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  {isLoading ? 'Loading...' : 'Sign in'}
+                  Sign in
                 </button>
               </div>
             </form>
