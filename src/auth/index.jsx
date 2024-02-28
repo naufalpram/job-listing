@@ -30,7 +30,7 @@ const AuthProvider = ({ children }) => {
             setUser({ username: data.username });
         })
         .catch(err => {
-            console.log(err);
+            alert("Username or Password is incorrect");
         })
     }
 

@@ -1,10 +1,8 @@
 import { Navigate } from "react-router-dom";
-import { useAuth } from "../auth"
-import { useState } from "react";
+import { useAuth } from "../auth";
 
 export default function Login() {
     const { isLoggedIn, login } = useAuth();
-    const [isLoading, setIsLoading] = useState(false);
 
     const handleLogin = (e) => {
         e.preventDefault();
